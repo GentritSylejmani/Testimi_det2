@@ -43,5 +43,10 @@ namespace Testimi_det2
             Driver.driver.FindElement(By.Id(Config.Hotmail.nextButton)).Click();
             Thread.Sleep(2000);
         }
+
+        public static void waitSomeTime(int time)
+        {
+            Thread.Sleep(time * 1000);
+        }
     }
 }

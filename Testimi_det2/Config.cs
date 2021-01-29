@@ -49,6 +49,18 @@ namespace Testimi_det2
             public static string createContactXPath = "/html/body/div[6]/div/div/div/div[2]/div[2]/main/section[2]/div[2]/div/button[1]";
 
             public static string wrongEmailFormat = "Use this format: someone@example.com";
+            public static string calendarButtonXPath = "/html/body/div[2]/div/div[2]/div[1]/div[1]/div/div/div[1]/div[2]/div/div[3]/div[2]";
+
+            public static string newCalendarEventButtonXPath = "//*[@id=\"NewEventButtonAnchor\"]";
+            public static string eventTitleInputXPath = "/html/body/div[6]/div/div/div/div[3]/div/div[2]/div[2]/div[1]/div[2]/div[2]/div/div/div/div/input";
+
+            public static string saveEventButtonXPath = "/html/body/div[6]/div/div/div/div[3]/div/div[2]/div[2]/div[2]/button[1]";
+
+            public static string confirmEventCreationButtonXPath = "/html/body/div[8]/div/div/div/div[2]/div[2]/div/div[2]/div[2]/div/span[1]/button";
+
+            public static string confirmEventWithoutTitle = "Do you want to save this appointment without a title?";
+
+            public static string noSubjectEvent = "(No subject)";
 
         }
     }
