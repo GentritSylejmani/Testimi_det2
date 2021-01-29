@@ -47,16 +47,20 @@ namespace Testimi_det2.TS
             //Thread.Sleep(2000);
             Driver.driver.FindElement(By.Id(Config.Hotmail.newEmailButton)).Click();
             Thread.Sleep(2000);
-            Driver.driver.FindElement(By.ClassName(Config.Hotmail.ricipientInputElementClass)).SendKeys(Config.Hotmail.Credentials.email);
+            Driver.driver.FindElement(By.XPath(Config.Hotmail.ricipientInputElementXPath)).SendKeys(Config.Hotmail.Credentials.email);
             Driver.driver.FindElement(By.XPath(Config.Hotmail.subjectInputElement)).SendKeys(Config.Hotmail.subjectString);
 
             string randstring = Config.Hotmail.GenerateRString();
 
-            Driver.driver.FindElement(By.ClassName(Config.Hotmail.bodyInputElementClass)).SendKeys(randstring);
+            Driver.driver.FindElement(By.XPath(Config.Hotmail.bodyInputElementXPath)).SendKeys(randstring);
 
             Driver.driver.FindElement(By.ClassName(Config.Hotmail.sendButtonClass)).Click();
 
-            Thread.Sleep(10000);
+            Thread.Sleep(5000);
+
+            Driver.driver.Navigate().Refresh();
+
+            Thread.Sleep(5000);
 
             Assert.IsTrue(Driver.driver.PageSource.Contains(randstring));
 

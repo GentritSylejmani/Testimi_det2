@@ -31,6 +31,8 @@ namespace Testimi_det2
             }
             Driver.driver = new ChromeDriver();
             Driver.driver.Navigate().GoToUrl(url);
+
+            
         }
         public static void LoginToEmail()
         {

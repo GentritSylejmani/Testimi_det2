@@ -27,15 +27,52 @@ namespace Testimi_det2.TS.ContactCreating
             Thread.Sleep(5000);
 
             Driver.driver.FindElement(By.Id(Config.Hotmail.newContactNameInput)).SendKeys(Config.Hotmail.newContactName);
-            Driver.driver.FindElement(By.Id(Config.Hotmail.newContactSurnameInput)).SendKeys(Config.Hotmail.newContactSurname);
+
+            string randstring = Config.Hotmail.GenerateRString();
+
+            Driver.driver.FindElement(By.Id(Config.Hotmail.newContactSurnameInput)).SendKeys(randstring);
             Driver.driver.FindElement(By.Id(Config.Hotmail.newContactEmailInput)).SendKeys(Config.Hotmail.validRicipient);
 
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             
-            Driver.driver.FindElement(By.Id(Config.Hotmail.createContactXPath)).Click();
+            Driver.driver.FindElement(By.XPath(Config.Hotmail.createContactXPath)).Click();
+
+            Thread.Sleep(1000);
+
+            Assert.IsTrue(Driver.driver.PageSource.Contains(randstring));
 
 
+        }
+        [Test]
+        public static void CreateContactWithInvalidMailFormat()
+        {
+            Action.InitializeDriver("Chrome");
+            Action.LoginToEmail();
 
+            Thread.Sleep(5000);
+
+            Driver.driver.FindElement(By.XPath(Config.Hotmail.contactsButtonXPath)).Click();
+            Thread.Sleep(5000);
+
+            Driver.driver.FindElement(By.XPath(Config.Hotmail.newContactButtonXPath)).Click();
+
+            Thread.Sleep(5000);
+
+            Driver.driver.FindElement(By.Id(Config.Hotmail.newContactNameInput)).SendKeys(Config.Hotmail.newContactName);
+
+            string randstring = Config.Hotmail.GenerateRString();
+            string randEmail = Config.Hotmail.GenerateRString();
+
+            Driver.driver.FindElement(By.Id(Config.Hotmail.newContactSurnameInput)).SendKeys(randstring);
+            Driver.driver.FindElement(By.Id(Config.Hotmail.newContactEmailInput)).SendKeys(randEmail);
+
+            Thread.Sleep(500);
+
+            Driver.driver.FindElement(By.XPath(Config.Hotmail.createContactXPath)).Click();
+
+            Thread.Sleep(1000);
+
+            Assert.IsTrue(Driver.driver.PageSource.Contains(Config.Hotmail.wrongEmailFormat));
         }
     }
 }
