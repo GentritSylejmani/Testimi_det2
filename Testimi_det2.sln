@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testimi_det2", "Testimi_det2\Testimi_det2.csproj", "{8627FBC9-6A2F-4120-8C62-9373A655CF83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8627FBC9-6A2F-4120-8C62-9373A655CF83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8627FBC9-6A2F-4120-8C62-9373A655CF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8627FBC9-6A2F-4120-8C62-9373A655CF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8627FBC9-6A2F-4120-8C62-9373A655CF83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA1F59AB-4875-4A48-B847-61B8BFDABDB5}
+	EndGlobalSection
+EndGlobal
