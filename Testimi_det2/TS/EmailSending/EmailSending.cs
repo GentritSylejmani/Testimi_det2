@@ -15,21 +15,16 @@ namespace Testimi_det2.TS
         public static void SendWithoutRecipient()
         {
             Action.InitializeDriver("Chrome");
-
-            //Driver.driver.FindElement(By.Id(Config.Hotmail.emailInputElement)).SendKeys(Config.Hotmail.Credentials.email);
-            //Driver.driver.FindElement(By.Id(Config.Hotmail.nextButton)).Click();
-            //Thread.Sleep(2000);
-            //Driver.driver.FindElement(By.Id(Config.Hotmail.passwordInputElement)).SendKeys(Config.Hotmail.Credentials.password);
-            //Driver.driver.FindElement(By.Id(Config.Hotmail.nextButton)).Click();
-            //Thread.Sleep(2000);
-
             Action.LoginToEmail();
 
             Driver.driver.FindElement(By.Id(Config.Hotmail.newEmailButton)).Click();
+            
             Thread.Sleep(2000);
-            //Driver.driver.FindElement(By.ClassName(Config.Hotmail.ricipientInputElementClass)).SendKeys(Config.Hotmail.validRicipient);
+
             Driver.driver.FindElement(By.ClassName(Config.Hotmail.sendButtonClass)).Click();
+            
             Thread.Sleep(2000);
+            
             Assert.IsTrue(Driver.driver.PageSource.Contains(Config.Hotmail.ricipientIsRequired));
 
         }
@@ -39,15 +34,12 @@ namespace Testimi_det2.TS
             Action.InitializeDriver("Chrome");
             Action.LoginToEmail();
 
-            //Driver.driver.FindElement(By.Id(Config.Hotmail.emailInputElement)).SendKeys(Config.Hotmail.Credentials.email);
-            //Driver.driver.FindElement(By.Id(Config.Hotmail.nextButton)).Click();
-            //Thread.Sleep(2000);
-            //Driver.driver.FindElement(By.Id(Config.Hotmail.passwordInputElement)).SendKeys(Config.Hotmail.Credentials.password);
-            //Driver.driver.FindElement(By.Id(Config.Hotmail.nextButton)).Click();
-            //Thread.Sleep(2000);
             Driver.driver.FindElement(By.Id(Config.Hotmail.newEmailButton)).Click();
+            
             Thread.Sleep(2000);
+            
             Driver.driver.FindElement(By.XPath(Config.Hotmail.ricipientInputElementXPath)).SendKeys(Config.Hotmail.Credentials.email);
+            
             Driver.driver.FindElement(By.XPath(Config.Hotmail.subjectInputElement)).SendKeys(Config.Hotmail.subjectString);
 
             string randstring = Config.Hotmail.GenerateRString();

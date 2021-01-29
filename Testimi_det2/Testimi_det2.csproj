@@ -68,6 +68,8 @@
     <Compile Include="TS\CalendarEvent\EventCreating.cs" />
     <Compile Include="TS\ContactCreating\ContactCreating.cs" />
     <Compile Include="TS\EmailSending\EmailSending.cs" />
+    <Compile Include="TS\GAP kalkulatori\GAP.cs" />
+    <Compile Include="TS\Kosovo Police\RedirectingToRaportoKriminApp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

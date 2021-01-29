@@ -8,6 +8,29 @@ namespace Testimi_det2
 {
     public class Config
     {
+        public static class GAP
+        {
+            public static string homepage = "https://www.institutigap.org";
+            public static string ekonomiaVeturaveButtonXPath = "/html/body/section[1]/div/ul/li[2]/a";
+            public static string taxCalculatorTabXPath = "/html/body/nav/div[1]/div[2]/ul/li[2]/a";
+        }
+        public static class KosovoPolice
+        {
+            public static string homepage = "https://www.kosovopolice.com";
+
+            public static string raportoKriminIMGXPath = "/html/body/div[1]/div[2]/div/div/div[2]/div/div/section[3]/div/div/div[2]/div/div/section[3]/div/div/div/div/div/div/div/div/a/img";
+
+            public static string raportoKriminString = "Raporto krimin";
+
+            public static string dergoButtonXPath = "/html/body/div[1]/div[2]/div[2]/div/div[2]/div/div/section/div/div/div[1]/div/div/section[2]/div/div/div/div/div/div/div/div/div/form/div[2]/div[5]/input";
+
+            public static string contactTab = "menu-item-41";
+
+            public static string FBProfileLinkXPath = "/html/body/div[1]/div[1]/header/div/div/div/section[1]/div/div/div/div/div/section[1]/div/div/div/div/div/div[3]/div/ul/li[1]/a/span[1]/i";
+
+            public static string notAvailableFBPage = "This page isn't available";
+        }
+
         public static class Hotmail
         {
 
@@ -17,6 +40,7 @@ namespace Testimi_det2
                 public static string password = "94574262Genti.11";
             }
             public static string login_page = "https://outlook.live.com/owa/?nlp=1";
+            public static string kosovopolicepage = "https://www.kosovopolice.com";
             public static string emailInputElement = "i0116";
             public static string passwordInputElement = "i0118";
             public static string newEmailButton = "id__5";
